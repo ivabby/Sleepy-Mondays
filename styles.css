@@ -83,3 +83,33 @@ figure, p { margin: 0; }
 #our-team .card:hover > div{
     transform: translateX(0);
 }
+
+
+
+#info { background-color: #64C65E; }
+
+#info .col-md-4:nth-child(2){ transform: scale(1.1);}
+@media (max-width: 768px) {
+    #info .col-md-4:nth-child(2){ transform: scale(1);}
+}
+
+#portfolio { padding: 100px 0; }
+#portfolio .port-item {
+    height: 200px;
+    position: relative;
+    transition: transform .8s;
+}
+
+#portfolio .port-item > * {
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+#portfolio .port-item::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    z-index: 0;
+    transition: background-color .3s;
+}
