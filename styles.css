@@ -97,7 +97,6 @@ figure, p { margin: 0; }
 #portfolio .port-item {
     height: 200px;
     position: relative;
-    transition: transform .8s;
 }
 
 #portfolio .port-item > * {
@@ -112,4 +111,13 @@ figure, p { margin: 0; }
     top: 0; bottom: 0; right: 0; left: 0;
     z-index: 0;
     transition: background-color .3s;
+}
+#portfolio .port-item:hover * {
+    opacity: 1;
+}
+
+#portfolio .port-item:hover::before { background-color: rgba(39,39,39,.7);}
+
+@media (max-width: 992px) {
+    #portfolio .port-item { height: 400px; }
 }
